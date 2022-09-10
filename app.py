@@ -12,6 +12,7 @@ welcome = "Welcome to your 100 Days of Code Log!"
 
 
 def prompt_new_entry():
+    """Prompts new entry and passes details to add_entry function"""
     day = input("Which 100 Days of Code day is this? ")
     activity = input("What have you learned today? ")
     thoughts = input("What are your thoughts about that? ")
@@ -21,6 +22,7 @@ def prompt_new_entry():
 
 
 def view_entries(entries):
+    """Prints entries from array received as argument"""
     for entry in entries:
         print(
             f"Day {entry['day']}/100\nDate: {entry['date']}\nActivity: {entry['activity']}\nThoughts: {entry['thoughts']}\n\n")
