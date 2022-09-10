@@ -8,4 +8,5 @@ def add_entry(entry_activity, entry_thoughts, entry_date, entry_day):
 
 
 def get_entries():
+    """Returns entries as an array of objects"""
     return entries
