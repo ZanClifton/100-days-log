@@ -1,6 +1,7 @@
 import sqlite3
 
 connection = sqlite3.connect("data.db")
+connection.row_factory = sqlite3.Row
 
 
 def create_table():

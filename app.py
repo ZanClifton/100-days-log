@@ -29,10 +29,10 @@ def view_entries(entries):
     for entry in entries:
         print(
             f"""
-    Day: {entry[3]}/100
-    Date: {entry[2]}
-    Activity: {entry[0]}
-    Thoughts: {entry[1]}
+    Day: {entry["day"]}/100
+    Date: {entry["date"]}
+    Activity: {entry["activity"]}
+    Thoughts: {entry["thoughts"]}
 
     +++++++++++++++++
         """)
