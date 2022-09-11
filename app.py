@@ -9,7 +9,7 @@ menu = """What do you want to do today?
 
 Enter a number: """
 
-welcome = "Welcome to your 100 Days of Code Log!"
+welcome = "Welcome to your 100 Days Log!"
 
 entry_display_format = f"""
 """
