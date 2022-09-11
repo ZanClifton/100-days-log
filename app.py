@@ -1,4 +1,4 @@
-from database import add_entry, get_entries
+from database import add_entry, create_table, get_entries
 
 menu = """What do you want to do today?
 
@@ -9,6 +9,9 @@ menu = """What do you want to do today?
 Enter a number: """
 
 welcome = "Welcome to your 100 Days of Code Log!"
+
+entry_display_format = f"""
+"""
 
 
 def prompt_new_entry():
@@ -25,10 +28,18 @@ def view_entries(entries):
     """Prints entries from array received as argument"""
     for entry in entries:
         print(
-            f"Day {entry['day']}/100\nDate: {entry['date']}\nActivity: {entry['activity']}\nThoughts: {entry['thoughts']}\n\n")
+            f"""
+    Day: {entry[3]}/100
+    Date: {entry[2]}
+    Activity: {entry[0]}
+    Thoughts: {entry[1]}
+
+    +++++++++++++++++
+        """)
 
 
 print(welcome)
+create_table()
 
 while (user_choice := int(input(menu))) != 3:
     # deal with user input

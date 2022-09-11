@@ -1,12 +1,27 @@
-entries = []
+import sqlite3
+
+connection = sqlite3.connect("data.db")
+
+
+def create_table():
+    with connection:
+        connection.execute(
+            "CREATE TABLE IF NOT EXISTS entries (activity TEXT, thoughts TEXT, date TEXT, day INT);")
 
 
 def add_entry(entry_activity, entry_thoughts, entry_date, entry_day):
     """Adds entry content and date, as an object, to the entries array"""
-    entries.append({"activity": entry_activity,
-                   "thoughts": entry_thoughts, "date": entry_date, "day": entry_day})
+    with connection:
+        connection.execute(
+            "INSERT INTO entries VALUES(?, ?, ? ,?);",
+            (entry_activity, entry_thoughts, entry_date, entry_day)
+        )
+    # entries.append({"activity": entry_activity,
+    #                "thoughts": entry_thoughts, "date": entry_date, "day": entry_day})
 
 
 def get_entries():
     """Returns entries as an array of objects"""
-    return entries
+    cursor = connection.execute(
+        "SELECT * FROM entries")
+    return cursor
