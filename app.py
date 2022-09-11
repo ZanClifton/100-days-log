@@ -1,4 +1,5 @@
 from database import add_entry, create_table, get_entries
+from art import logo
 
 menu = """What do you want to do today?
 
@@ -38,6 +39,7 @@ def view_entries(entries):
         """)
 
 
+print(logo)
 print(welcome)
 create_table()
 
