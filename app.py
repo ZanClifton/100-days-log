@@ -17,7 +17,7 @@ entry_display_format = f"""
 
 def prompt_new_entry():
     """Prompts new entry and passes details to add_entry function"""
-    day = input("Which 100 Days of Code day is this? ")
+    day = input("Which 100 Days day is this? ")
     activity = input("What have you learned today? ")
     thoughts = input("What are your thoughts about that? ")
     date = input("Enter the date: ")
