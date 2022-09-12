@@ -17,8 +17,6 @@ def add_entry(entry_activity, entry_thoughts, entry_date, entry_day):
             "INSERT INTO entries VALUES(?, ?, ? ,?);",
             (entry_activity, entry_thoughts, entry_date, entry_day)
         )
-    # entries.append({"activity": entry_activity,
-    #                "thoughts": entry_thoughts, "date": entry_date, "day": entry_day})
 
 
 def get_entries():
